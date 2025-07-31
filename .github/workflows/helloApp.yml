@@ -11,5 +11,5 @@ Jobs:
       uses: actions/checkout@v3
 
     - name: Print Hello
-      runs: echo "Hello, World!"  
+      run: echo "Hello, World!"  
 
