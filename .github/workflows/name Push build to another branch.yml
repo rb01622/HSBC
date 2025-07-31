@@ -8,7 +8,7 @@ jobs:
     
     steps:
       - name: checkout main branch
-        uses: action/checkout@v4
+        uses: action/checkout@v3
 
       - name: Setup Git Config
         run: |
