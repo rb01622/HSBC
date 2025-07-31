@@ -1,16 +1,16 @@
 name: Hello World
 
-  on: [push]
+on: [push]
 
-    jobs:
-      say-hello:
-        runs-on: ubuntu-latest
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
 
-        steps:
+    steps:
     
-          - name: Checkout Code
-          uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-          - name: Print Hello
-          run: echo "Hello, World!"  
+      - name: Print Hello
+        run: echo "Hello, World!"  
 
