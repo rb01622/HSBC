@@ -1,9 +1,9 @@
 name: Push build to another branch
-  on:
+on:
    push:
     branches: [ main ]
 jobs:
-  Move build:
+  Movebuild:
     runs-on: ubuntu-latest
     
     steps:
@@ -12,18 +12,15 @@ jobs:
 
       - name: Setup Git Config
         run: |
-	  git config --add global.user "RB01622"
-	  git config --add global.email "kbkannah@gmail.com"
-
-	- name: Build static files
-	  run: |
-	    mkdir out
-	    echo "Hello from GitHub Actions!" > out/index.html
-
-	- name Push to RajeshTest branch
-	  run: |
-	    git checkout --orphan RajeshTest
-	    git --work-tree=out add -all
-	    git --work-tree=out -m "Deploy from GITHUB actions"
-	    git push origin HEAD:RajeshTest --force     
-   
+         git config user.name "RB01622"
+         git config user.email "kbkannah@gmail.com"
+         - name: Build static files
+         run: |
+         mkdir out
+         echo "Hello from GitHub Actions!" > out/index.html
+         - name Push to RajeshTest branch
+         run: |
+         git checkout --orphan RajeshTest
+         git --work-tree=out add -all
+         git --work-tree=out -m "Deploy from GITHUB actions"
+         git push origin HEAD:RajeshTest --force
