@@ -12,8 +12,8 @@ jobs:
 
       - name: Setup Git Config
         run: |
-         git config user.name "RB01622"
-         git config user.email "kbkannah@gmail.com"
+           git config user.name "RB01622"
+           git config user.email "rb01622@users.noreply.github.com
          - name: Build static files
          run: |
          mkdir out
