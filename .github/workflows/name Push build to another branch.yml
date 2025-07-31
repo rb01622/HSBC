@@ -1,26 +1,13 @@
-name: Push build to another branch
-on:
-   push:
-    branches: [ main ]
-jobs:
-  Movebuild:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: checkout main branch
-        uses: actions/checkout@v3
+name: Hello World
 
-      - name: Setup Git Config
-        run: |
-           git config user.name "RB01622"
-           git config user.email "rb01622@users.noreply.github.com
-         - name: Build static files
-         run: |
-         mkdir out
-         echo "Hello from GitHub Actions!" > out/index.html
-         - name Push to RajeshTest branch
-         run: |
-         git checkout --orphan RajeshTest
-         git --work-tree=out add -all
-         git --work-tree=out -m "Deploy from GITHUB actions"
-         git push origin HEAD:RajeshTest --force
+on:
+ push:
+   branches: [ main ]
+
+jobs:
+  say-Hello:
+    runs-on: ubuntu-latest
+
+steps:
+  -name: Run Hello World
+    uses: echo "Hello, World!"
